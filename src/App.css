@@ -1,0 +1,159 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Poppins', cursive, sans-serif;
+  background-image: url('./assets/☆ sanrio.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #444;
+}
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+}
+
+/* Contenedor inicio y menú */
+.inicio-container,
+.menu-container {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  backdrop-filter: blur(10px); 
+}
+
+/* Títulos */
+.titulo-principal {
+  font-size: 2.3rem;
+  color: #ff66b2;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px #fff;
+}
+
+.saludo {
+  font-size: 1.8rem;
+  color: #ff66b2;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  margin-bottom: 20px;
+  color: #a64d79;
+}
+
+/* Formulario */
+.formulario-inicio .input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #d63384;
+}
+
+.input-group input {
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #ffb3d9;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* Input translúcido */
+}
+
+.boton-principal, .boton-juego {
+  background-color: rgba(255, 128, 191, 0.8); /* Color pastel translúcido */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton-principal:hover, .boton-juego:hover {
+  background-color: rgba(255, 77, 162, 0.85);
+}
+/* Juegos en fila horizontal */
+.juegos-grid {
+  display: flex;
+  justify-content: center;  
+  align-items: center;    
+  gap: 20px;               
+  padding: 0px;            
+  flex-wrap: nowrap;        
+  overflow-x: auto;         
+}
+
+/* Ajuste para las tarjetas de juego */
+.juego-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 15px;
+  width: 200px;             /* Tamaño fijo para las tarjetas */
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(8px);
+  margin-bottom: 20px;      /* Espacio debajo de cada tarjeta */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .juego-card {
+    width: 150px;           /* Ajuste el tamaño de las tarjetas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .juego-card {
+    width: 120px;           /* Ajustar aún más el tamaño de las tarjetas en pantallas muy pequeñas */
+  }
+}
+
+
+.juego-card:hover {
+  transform: scale(1.05);
+}
+
+.juego-icono {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.juego-card h3 {
+  font-size: 1.3rem;
+  color: #ff66a3;
+}
+
+.juego-card p {
+  font-size: 0.9rem;
+  color: #b3598c;
+  margin-bottom: 12px;
+}
+
+.juego-imagen {
+  width: 110px; 
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.juego-card:hover .juego-imagen {
+  transform: scale(1.1);
+}
+
